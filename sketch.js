@@ -18,11 +18,13 @@ function setup() {
     stone1 = new Stone(185, 495, 40, 40)
     boy1 = new Boy(stone1.body, {x:185, y:495})
     mango1 = new Mango(1050, 210, 75, 75)
-    mango2 = new Mango(1140, 210, 55, 55)
-    mango3 = new Mango(1000, 290, 65, 65)
-    mango4 = new Mango(1230, 320, 45, 45)
-    mango5 = new Mango(880, 320, 75, 75)
+    mango2 = new Mango(1140, 230, 55, 55)
+    mango3 = new Mango(1000, 290, 45, 45)
+    mango4 = new Mango(1230, 320, 75, 75)
+    mango5 = new Mango(880, 320, 55, 55)
     mango6 = new Mango(1120, 350, 55, 55)
+    mango7 = new Mango(970, 190, 55, 55)
+    mango8 = new Mango(6970,370, 45, 45)
 
 	Engine.run(engine);
 }
@@ -32,10 +34,11 @@ function draw() {
   background('skyBlue');
   Engine.update(engine)
 
-  box1.display();
+  //box1.display();
   tree.display();
 
   stone1.display();
+
   boy1.display();
   
   mango1.display();
@@ -44,7 +47,10 @@ function draw() {
   mango4.display();
   mango5.display();
   mango6.display();
-  push();
+  mango7.display();  
+  mango8.display();
+push();
+
 fill("yellow")
 ellipse(50, 50, 140)
 pop();

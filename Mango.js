@@ -2,13 +2,12 @@ class Mango{
     constructor(x,y,w,h){
       var option ={
           isStatic: true,
-        restitution:0.4,
+        restitution:0,
         friction:1
       }
       
-        this.body = Bodies.rectangle(x, y, w, h, option);
-        this.width = w;
-        this.height = h;
+        this.body = Bodies.circle(x, y, 50, option);
+        this.radius = 50 ;
         this.image = loadImage('mango.png')
         
         World.add(world, this.body);
@@ -22,7 +21,7 @@ push();
       translate(pos.x, pos.y)
       rotate(angle)
      imageMode(CENTER)
-      image(this.image, 0, 0, this.width, this.height)
+      image(this.image, 0, 0, this.radius, this.radius)
  pop();      
       
     }

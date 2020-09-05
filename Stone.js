@@ -2,14 +2,14 @@ class Stone{
     constructor(x,y,w,h){
       var options = {
         isStatic:false,
-        restitution: 0.4,
-        density:1.2
+        restitution: 0,
+        density:1.2,
+        friction:1
         
       }
       
-        this.body = Bodies.rectangle(x, y, w, h, options);
-        this.width = w;
-        this.height = h;
+        this.body = Bodies.circle(x, y, 50, options);
+        this.radius = 50;
         this.image = loadImage('stone.png')
         
         World.add(world, this.body);
@@ -22,7 +22,7 @@ class Stone{
       translate(pos.x, pos.y);
       rotate(angle);
      imageMode(CENTER)
-      image(this.image, 0, 0, this.width, this.height)
+      image(this.image, 0, 0, this.radius, this.radius)
       pop()
       
     }

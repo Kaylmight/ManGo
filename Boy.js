@@ -4,8 +4,8 @@ class Boy{
 var option={
     bodyA:body1,
     pointB:point2,
-    length:10,
-    stiffness:0.04,
+    length:1,
+    stiffness:0.004,
  }
  
  this.sling = Constraint.create(option);
@@ -20,11 +20,10 @@ var option={
         var posA = this.sling.bodyA.position;
         var posB = this.point2;
         push();
-        var anchor1X = posA.x;
-        var anchor1Y = posA.y;
+        
         
         strokeWeight(10)
-        line(anchor1X, anchor1Y, posB.x, posB.y);
+        line(posA.x, posA.y, posB.x, posB.y);
         
         pop();
     }  

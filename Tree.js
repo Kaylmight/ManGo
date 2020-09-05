@@ -16,7 +16,6 @@ class Tree{
     
   display(){
     var pos = this.body.position;
-    var angle = this.body.angle;
     
    
    imageMode(CENTER)
