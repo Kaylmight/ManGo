@@ -4,7 +4,7 @@ class Boy{
 var option={
     bodyA:body1,
     pointB:point2,
-    length:1,
+    length:10,
     stiffness:0.004,
  }
  
@@ -14,7 +14,7 @@ var option={
     this.boy = loadImage("boy.png")
 }
  display(){
-    image(this.boy, 250, 550, 200, 300)
+    image(this.boy, 150, 400, 200, 300)
     if(this.sling.bodyA != null){
 
         var posA = this.sling.bodyA.position;
